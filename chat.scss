@@ -1,0 +1,403 @@
+$font-family : 'Roboto', sans-serif;
+$light-color: white;
+$primary-color: #fff;
+$main-color: #1A286C;
+$btn-text: blue;
+$header-color: #F1F2F5;
+
+
+.landing{
+    background-color: $main-color;
+    height: 100vh;
+    .header{
+        background-color: $header-color;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        font-family: $font-family;
+        color: $main-color;
+        h3{
+            font-size: 25px; 
+        }
+        nav{
+         display: flex;
+         justify-content: space-between;
+         width: 150px;
+         a{
+             font-size: 20px;
+            font-family: $font-family;
+            color: $main-color;
+            text-decoration: none;
+         }
+        
+        }
+        @media only  screen and (min-width: 901px){
+            padding: 0 100px;
+            
+        }
+    }
+    &-content{
+        text-align: center;
+        margin: 120px 0; 
+        text-align: center;
+        font-family: $font-family;
+        color: $light-color;
+        h4{
+            font-size: 30px;
+        }
+        .landingbtns{
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            width: 50%;
+            text-align: center;
+            
+            a{
+                padding: 10px;
+                border-radius: 5px;
+                background-color: $primary-color;
+                text-decoration: none;
+                font-family: $font-family;
+                @media only  screen and (min-width: 901px){
+                    padding: 10px 40px;
+                }
+            }
+            a:hover{
+                opacity: 0.5;
+            }
+            @media only  screen and (min-width: 901px){
+                margin: 40% 0 0; 
+                display: flex;
+                justify-content: space-between;
+                margin: 0 auto;
+                width: 20%;
+                text-align: center;
+            }
+        }
+        @media only  screen and (min-width: 901px){
+            margin: 200px 0 0; 
+        }
+    }
+    
+    @media only  screen and (min-width: 901px){
+        
+    }
+}
+
+
+.signup-drp{
+    display: none;
+    .signUp-display{
+        position: absolute;
+       right: 2%;
+       left: 0;
+        top: 2%;
+        z-index: 1;
+        display: block;
+        background-color: $main-color;
+        height: 60vh;
+        animation: slideRight 1s ease-in;
+        @keyframes slideRight{
+            0%{
+                transform: translateX(-500px);
+            }
+            100%{
+                transform: translateX(0px);
+            }
+        }
+        .header{
+            // background-color: $header-color;
+            // display: flex;
+            // align-items: center;
+            // justify-content: space-between;
+            // padding: 0 20px;
+            // font-family: $font-family;
+            // color: $light-color;
+            // nav{
+            //  display: flex;
+            //  justify-content: space-between;
+            //  width: 120px;
+            //  a{
+            //     font-family: $font-family;
+            //     color: $light-color;
+            //     text-decoration: none;
+            //  }
+            
+            // }
+            @media only  screen and (min-width: 901px){
+                h3{
+                    display: none;
+                }
+                nav{
+                    display: none;
+                }
+                
+                    }
+        }
+        .signup-content{
+            margin: 50px 0 ;
+            text-align: center;
+            .sign{
+                text-align: center;
+                margin: 0 0  10px;
+                input{
+                    margin: 5px 0;
+                    padding: 8px;
+                    border-radius: 5px;
+                    border: 1px solid $light-color;
+                    background-color: $main-color;
+                    color: $light-color;
+                   
+                    @media only  screen and (min-width: 901px){
+                        width: 80%;
+                        padding: 15px;
+                    }
+                }
+                input::placeholder{
+                    opacity: 1;
+                }
+            }
+            form{
+                margin: 20px 0;
+                label{
+                   line-height: 1.2;
+                   color: $header-color;
+                   a{
+                    color: $header-color;
+                    text-decoration: none;
+                    font-weight: 700;
+                   }
+                }
+                @media only  screen and (min-width: 901px){
+                   margin: 20px 0;
+
+                }
+            }
+            .signToDashboard{
+                margin: 20px 0;
+                padding: 10px;
+                background-color: $light-color;
+                color: $btn-text;
+                font-family: $font-family;
+                text-decoration: none;
+                border-radius: 15px 0 5px 0;
+
+                @media only  screen and (min-width: 901px){
+                    padding: 10px 30px;
+                    .signToDashboard:hover{
+                        opacity: 0.5;
+                    }
+                }
+            }
+           
+            @media only  screen and (min-width: 901px){
+                margin: 200px 0  50px;
+            }
+        }
+        @media only  screen and (min-width: 901px){
+            position: absolute;
+            right: 25%;
+            left: 25%;
+            top: 14%;
+        }
+    }
+    @media only  screen and (min-width: 901px){
+        
+    }
+}
+
+
+
+
+.login-drp{
+    display: none;
+    .login-display{
+        display: block;
+        position: absolute;
+        right: 0;
+        left: 2%;
+        top: 2%;
+        z-index: 1;
+        background-color: $main-color;
+        height: 60vh;
+        animation: slideLeft 1s ease-in;
+        @keyframes slideLeft{
+            0%{
+                transform: translateX(500px);
+            }
+            100%{
+                transform: translateX(0px);
+            }
+        }
+        .header{
+            // background-color: $header-color;
+            // display: flex;
+            // align-items: center;
+            // justify-content: space-between;
+            // padding: 0 20px;
+            // font-family: $font-family;
+            // color: $light-color;
+            // nav{
+            //  display: flex;
+            //  justify-content: space-between;
+            //  width: 120px;
+            //  a{
+            //     font-family: $font-family;
+            //     color: $light-color;
+            //     text-decoration: none;
+            //  }
+            
+            // }
+            @media only  screen and (min-width: 901px){
+        
+        h3{
+            display: none;
+        }
+        nav{
+            display: none;
+        }
+            }
+        }
+        .login-content{
+            margin: 50px 0 ;
+            text-align: center;
+            .sign{
+                text-align: center;
+                margin: 0 0  30px;
+                input{
+                    margin: 5px 0;
+                    padding: 8px;
+                    border-radius: 5px;
+                    border: 1px solid $light-color;
+                    background-color: $main-color;
+                    color: $light-color;
+                   
+                    @media only  screen and (min-width: 901px){
+                        width: 80%;
+                        padding: 15px;
+                    }
+                }
+                input::placeholder{
+                    opacity: 1;
+                }
+            }
+            .logToDashboard{
+                padding: 10px;
+                background-color: $light-color;
+                color: $btn-text;
+                font-family: $font-family;
+                text-decoration: none;
+                border-radius: 15px 0 5px 0;
+                @media only  screen and (min-width: 901px){
+                    padding: 10px 30px;
+                    .logToDashboard:hover{
+                        opacity: 0.5;
+                    }
+                }
+            }
+
+            
+            @media only  screen and (min-width: 901px){
+                margin: 150px 0  50px;
+                width: 100%;
+               
+            }
+        }
+        @media only  screen and (min-width: 901px){
+            position: absolute;
+            right: 25%;
+            left: 25%;
+            top: 14%;
+            
+        }
+    }
+   
+}
+
+
+.account-section{
+background-color: $main-color;
+height: 100vh;
+    .header{
+        background-color: $header-color;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        font-family: $font-family;
+        color: $main-color;
+        h3{
+            font-size: 20px;
+        }
+        nav{
+         display: flex;
+         justify-content: space-between;
+         width: 150px;
+         a{
+            font-family: $font-family;
+            color: $light-color;
+            text-decoration: none;
+            color: $main-color;
+            font-size: 20px;
+         }
+        
+        }
+        @media only  screen and (min-width: 901px){
+            padding: 0 100px;
+            
+        }
+    }
+    .account-content{
+        margin-top: 10px;
+        .friends{
+        .friend{
+            padding: 0 15px;
+            margin: 8px 0;
+            border: 5px solid whitesmoke;
+            border-radius: 5px;
+            background-color: $light-color;
+            h1{
+              margin: 0;
+              color: $main-color;
+            }
+            .chatPreview{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin:  0;
+                
+                h4{
+                    margin: 0;
+                    color: $main-color;
+                }
+                h5{
+                    text-align: center;
+                    margin: 0;
+                    padding: 10px 10px 5px;
+                    color: $light-color;
+                    background-color: $main-color;
+                    border-radius: 50%;
+                    width: 10px;
+
+                }
+                
+            }
+        }
+        @media only  screen and (min-width: 901px){
+           width: 40%;
+            
+        }
+        }
+    }
+
+
+
+
+
+
+
+    @media only  screen and (min-width: 901px){
+        
+    }
+}
