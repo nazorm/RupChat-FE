@@ -20,7 +20,13 @@
 }
 
 .landing .header h3 {
-  font-size: 25px;
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 901px) {
+  .landing .header h3 {
+    font-size: 20px;
+  }
 }
 
 .landing .header nav {
@@ -30,14 +36,27 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 150px;
+  width: 120px;
 }
 
 .landing .header nav a {
-  font-size: 20px;
+  font-size: 16px;
   font-family: "Roboto", sans-serif;
+  font-weight: 300;
   color: #1A286C;
   text-decoration: none;
+}
+
+@media only screen and (min-width: 901px) {
+  .landing .header nav a {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  .landing .header nav {
+    width: 150px;
+  }
 }
 
 @media only screen and (min-width: 901px) {
@@ -76,6 +95,8 @@
   background-color: #fff;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
+  color: #1A286C;
+  font-weight: 500;
 }
 
 @media only screen and (min-width: 901px) {
@@ -116,12 +137,12 @@
 .signup-drp .signUp-display {
   position: absolute;
   right: 2%;
-  left: 0;
+  left: 2%;
   top: 2%;
   z-index: 1;
   display: block;
   background-color: #1A286C;
-  height: 60vh;
+  height: 100vh;
   -webkit-animation: slideRight 1s ease-in;
           animation: slideRight 1s ease-in;
 }
@@ -146,6 +167,38 @@
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
   }
+}
+
+.signup-drp .signUp-display .header {
+  background-color: #F1F2F5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 20px;
+  font-family: "Roboto", sans-serif;
+  color: #1A286C;
+}
+
+.signup-drp .signUp-display .header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 120px;
+}
+
+.signup-drp .signUp-display .header nav a {
+  font-family: "Roboto", sans-serif;
+  color: #1A286C;
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 901px) {
@@ -201,6 +254,7 @@
 
 .signup-drp .signUp-display .signup-content form {
   margin: 20px 0;
+  padding: 0 10px;
 }
 
 .signup-drp .signUp-display .signup-content form label {
@@ -224,9 +278,10 @@
   margin: 20px 0;
   padding: 10px;
   background-color: white;
-  color: blue;
+  color: #1A286C;
   font-family: "Roboto", sans-serif;
   text-decoration: none;
+  font-weight: 500;
   border-radius: 15px 0 5px 0;
 }
 
@@ -251,6 +306,7 @@
     right: 25%;
     left: 25%;
     top: 14%;
+    height: 60vh;
   }
 }
 
@@ -261,12 +317,12 @@
 .login-drp .login-display {
   display: block;
   position: absolute;
-  right: 0;
+  right: 2%;
   left: 2%;
   top: 2%;
   z-index: 1;
   background-color: #1A286C;
-  height: 60vh;
+  height: 100vh;
   -webkit-animation: slideLeft 1s ease-in;
           animation: slideLeft 1s ease-in;
 }
@@ -293,6 +349,38 @@
   }
 }
 
+.login-drp .login-display .header {
+  background-color: #F1F2F5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 20px;
+  font-family: "Roboto", sans-serif;
+  color: #1A286C;
+}
+
+.login-drp .login-display .header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 120px;
+}
+
+.login-drp .login-display .header nav a {
+  font-family: "Roboto", sans-serif;
+  color: #1A286C;
+  text-decoration: none;
+}
+
 @media only screen and (min-width: 901px) {
   .login-drp .login-display .header h3 {
     display: none;
@@ -303,7 +391,7 @@
 }
 
 .login-drp .login-display .login-content {
-  margin: 50px 0;
+  margin: 100px 0;
   text-align: center;
 }
 
@@ -347,8 +435,9 @@
 .login-drp .login-display .login-content .logToDashboard {
   padding: 10px;
   background-color: white;
-  color: blue;
+  color: #1A286C;
   font-family: "Roboto", sans-serif;
+  font-weight: 500;
   text-decoration: none;
   border-radius: 15px 0 5px 0;
 }
@@ -375,6 +464,7 @@
     right: 25%;
     left: 25%;
     top: 14%;
+    height: 60vh;
   }
 }
 
@@ -396,11 +486,18 @@
           justify-content: space-between;
   padding: 0 20px;
   font-family: "Roboto", sans-serif;
+  font-weight: 300;
   color: #1A286C;
 }
 
 .account-section .header h3 {
-  font-size: 20px;
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 901px) {
+  .account-section .header h3 {
+    font-size: 20px;
+  }
 }
 
 .account-section .header nav {
@@ -410,7 +507,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 150px;
+  width: 120px;
 }
 
 .account-section .header nav a {
@@ -418,7 +515,19 @@
   color: white;
   text-decoration: none;
   color: #1A286C;
-  font-size: 20px;
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 901px) {
+  .account-section .header nav a {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 901px) {
+  .account-section .header nav {
+    width: 150px;
+  }
 }
 
 @media only screen and (min-width: 901px) {
