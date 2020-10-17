@@ -58,7 +58,7 @@ $dancing-font: 'Pacifico', cursive;
     border-radius: 10px;
     width: 80%;
     height: 700px;
-    margin: 40px auto 0;
+    margin: 40px auto ;
     padding: 0;
    border: 1px solid rgba(0, 0, 0, 0.15);
    }
@@ -66,12 +66,11 @@ $dancing-font: 'Pacifico', cursive;
 }
 
 .signup-section, .login-section{
-    .signUp-display, .login-display{
-        
+    .signUp-display, .login-display{   
         height: 100vh;  
         .signup-content, .login-content{
-            padding: 120px 0 ;
             text-align: center;
+            padding: 120px 0 ;
             flex: 50%;
             width: 100%;
            
@@ -314,3 +313,4 @@ height: 100vh;
         
     }
 }
+

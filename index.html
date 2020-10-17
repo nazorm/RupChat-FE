@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trybe</title>
+    <title>WeChat</title>
     <link rel="stylesheet" href="./chat.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
@@ -17,7 +17,7 @@
   </head>
   <body>
     <div class="header">
-      <h3>Trybe</h3>
+      <h3>WeChat</h3>
       <nav>
         <a href="https://google.com" target="_blank">About</a>
         <a href="https://twitter.com" target="_blank">Contact</a>
@@ -28,15 +28,14 @@
       <section class="signup-section">
         <div class="signUp-display">
           <div class="signup-content">
-            <h3>Welcome to Trybe</h3>
+            <h3>Welcome to WeChat</h3>
             <h5>Sign Up to join the Trybe!</h5>
             <form action="" class="sign"></form>
             <div class="sign">
-              <input type="text" placeholder="John Doe" /><br />
-              <input type="text" placeholder="johndoe@gmail.com" /><br />
-              <input type="text" placeholder="+23480123456789" /><br />
-              <input type="password" placeholder="Password" /><br />
-              <input type="password" placeholder="Confirm Password" />
+              <input type="text" placeholder="johndoe@gmail.com" class="email"  /><br />
+              <input type="text" placeholder="Username" class="userName" /><br />
+              <input type="password" placeholder="Password" class="password" /><br />
+              <input type="password" placeholder="Confirm Password" class="confirmPassword" />
             </div>
             <form action="">
               <input type="checkbox" />
@@ -45,13 +44,13 @@
                 guide the <a href="#">operations</a> of this organization</label
               >
             </form>
-            <a href="./account.html" class="signToDashboard"> Happy Chatting</a>
-            <p>Have an account? <a href="./login.html">Log In</a></p>
+            <a href="#" class="signToDashboard" onclick="signup()"> Happy Chatting</a>
+            <p class="p">Have an account? <a href="./login.html">Log In</a></p>
           </div>
           <div class="image-container">
             <img src="./road-image.jpg" alt="" class="image" />
             <div class="overlaytext">
-              <h3>Trybe</h3>
+              <h3>WeChat</h3>
               <h4>Meet.Connect.Chat</h4>
             </div>
           </div>

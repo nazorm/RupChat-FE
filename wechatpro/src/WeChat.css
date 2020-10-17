@@ -74,7 +74,7 @@ a:hover {
     border-radius: 10px;
     width: 80%;
     height: 700px;
-    margin: 40px auto 0;
+    margin: 40px auto;
     padding: 0;
     border: 1px solid rgba(0, 0, 0, 0.15);
   }
@@ -85,8 +85,8 @@ a:hover {
 }
 
 .signup-section .signUp-display .signup-content, .signup-section .signUp-display .login-content, .signup-section .login-display .signup-content, .signup-section .login-display .login-content, .login-section .signUp-display .signup-content, .login-section .signUp-display .login-content, .login-section .login-display .signup-content, .login-section .login-display .login-content {
-  padding: 120px 0;
   text-align: center;
+  padding: 120px 0;
   -webkit-box-flex: 50%;
       -ms-flex: 50%;
           flex: 50%;
