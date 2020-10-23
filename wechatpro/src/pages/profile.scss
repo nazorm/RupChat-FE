@@ -1,0 +1,76 @@
+$font-family: "Roboto", sans-serif;
+$light-color: #1a286c;
+$main-color: #fff;
+$btn-text: blue;
+$header-color: #f1f2f5;
+$dancing-font: "Pacifico", cursive;
+
+
+
+.profile-container{
+    background-color: $header-color;
+    width: 100%;
+    height: 100vh;
+    border-radius: 10px;
+    text-align: center;
+    color: $light-color;
+    @media only screen and (min-width: 901px) {
+      margin: 40px auto;
+      width: 500px;
+      height: 600px;
+    }
+}
+
+h1{
+padding: 40px 0 0;
+margin: 0;
+}
+.changeprofile{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin: 0 0 40px;
+  justify-content: center;
+  h3{
+    margin: 0 10px 0 0;
+}
+button{
+  margin: 0;
+  align-self: flex-end;
+  border:1px solid  rgba(0, 0, 0, 0.15);
+  font-weight: 700;
+  
+
+}
+}
+
+input {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background-color: $main-color;
+    color: $light-color;
+
+    @media only screen and (min-width: 901px) {
+      width: 80%;
+      padding: 15px;
+    }
+  }
+  input::placeholder {
+    opacity: 1;
+  }
+.profile-submit-btn{
+  margin: 50px 0;
+  padding: 10px;
+  background-color: $light-color;
+  color: $main-color;
+  font-family: $font-family;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 15px 0 5px 0;
+
+  @media only screen and (min-width: 901px) {
+    padding: 10px 30px;
+  }
+}

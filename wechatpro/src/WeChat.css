@@ -1,5 +1,5 @@
 .header {
-  background-color: #1A286C;
+  background-color: #1a286c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,6 +16,7 @@
 
 .header h3 {
   font-size: 18px;
+  margin: 20px 0;
 }
 
 @media only screen and (min-width: 901px) {
@@ -65,7 +66,7 @@ a:hover {
 }
 
 .container {
-  background-color: #F1F2F5;
+  background-color: #f1f2f5;
   width: 100%;
 }
 
@@ -80,11 +81,21 @@ a:hover {
   }
 }
 
-.signup-section .signUp-display, .signup-section .login-display, .login-section .signUp-display, .login-section .login-display {
+.signup-section .signUp-display,
+.signup-section .login-display,
+.login-section .signUp-display,
+.login-section .login-display {
   height: 100vh;
 }
 
-.signup-section .signUp-display .signup-content, .signup-section .signUp-display .login-content, .signup-section .login-display .signup-content, .signup-section .login-display .login-content, .login-section .signUp-display .signup-content, .login-section .signUp-display .login-content, .login-section .login-display .signup-content, .login-section .login-display .login-content {
+.signup-section .signUp-display .signup-content,
+.signup-section .signUp-display .login-content,
+.signup-section .login-display .signup-content,
+.signup-section .login-display .login-content,
+.login-section .signUp-display .signup-content,
+.login-section .signUp-display .login-content,
+.login-section .login-display .signup-content,
+.login-section .login-display .login-content {
   text-align: center;
   padding: 120px 0;
   -webkit-box-flex: 50%;
@@ -93,78 +104,202 @@ a:hover {
   width: 100%;
 }
 
-.signup-section .signUp-display .signup-content h3, .signup-section .signUp-display .signup-content h5, .signup-section .signUp-display .login-content h3, .signup-section .signUp-display .login-content h5, .signup-section .login-display .signup-content h3, .signup-section .login-display .signup-content h5, .signup-section .login-display .login-content h3, .signup-section .login-display .login-content h5, .login-section .signUp-display .signup-content h3, .login-section .signUp-display .signup-content h5, .login-section .signUp-display .login-content h3, .login-section .signUp-display .login-content h5, .login-section .login-display .signup-content h3, .login-section .login-display .signup-content h5, .login-section .login-display .login-content h3, .login-section .login-display .login-content h5 {
+.signup-section .signUp-display .signup-content h3,
+.signup-section .signUp-display .signup-content h5,
+.signup-section .signUp-display .login-content h3,
+.signup-section .signUp-display .login-content h5,
+.signup-section .login-display .signup-content h3,
+.signup-section .login-display .signup-content h5,
+.signup-section .login-display .login-content h3,
+.signup-section .login-display .login-content h5,
+.login-section .signUp-display .signup-content h3,
+.login-section .signUp-display .signup-content h5,
+.login-section .signUp-display .login-content h3,
+.login-section .signUp-display .login-content h5,
+.login-section .login-display .signup-content h3,
+.login-section .login-display .signup-content h5,
+.login-section .login-display .login-content h3,
+.login-section .login-display .login-content h5 {
   margin: 0 0 10px;
-  color: #1A286C;
+  color: #1a286c;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 20px;
 }
 
-.signup-section .signUp-display .signup-content .sign, .signup-section .signUp-display .login-content .sign, .signup-section .login-display .signup-content .sign, .signup-section .login-display .login-content .sign, .login-section .signUp-display .signup-content .sign, .login-section .signUp-display .login-content .sign, .login-section .login-display .signup-content .sign, .login-section .login-display .login-content .sign {
+.signup-section .signUp-display .signup-content .sign,
+.signup-section .signUp-display .login-content .sign,
+.signup-section .login-display .signup-content .sign,
+.signup-section .login-display .login-content .sign,
+.login-section .signUp-display .signup-content .sign,
+.login-section .signUp-display .login-content .sign,
+.login-section .login-display .signup-content .sign,
+.login-section .login-display .login-content .sign {
   text-align: center;
-  margin: 10px 0  50px;
+  margin: 10px 0 50px;
 }
 
-.signup-section .signUp-display .signup-content .sign input, .signup-section .signUp-display .login-content .sign input, .signup-section .login-display .signup-content .sign input, .signup-section .login-display .login-content .sign input, .login-section .signUp-display .signup-content .sign input, .login-section .signUp-display .login-content .sign input, .login-section .login-display .signup-content .sign input, .login-section .login-display .login-content .sign input {
+.signup-section .signUp-display .signup-content .sign input,
+.signup-section .signUp-display .login-content .sign input,
+.signup-section .login-display .signup-content .sign input,
+.signup-section .login-display .login-content .sign input,
+.login-section .signUp-display .signup-content .sign input,
+.login-section .signUp-display .login-content .sign input,
+.login-section .login-display .signup-content .sign input,
+.login-section .login-display .login-content .sign input {
   margin: 5px 0;
   padding: 8px;
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.15);
   background-color: #fff;
-  color: #1A286C;
+  color: #1a286c;
 }
 
 @media only screen and (min-width: 901px) {
-  .signup-section .signUp-display .signup-content .sign input, .signup-section .signUp-display .login-content .sign input, .signup-section .login-display .signup-content .sign input, .signup-section .login-display .login-content .sign input, .login-section .signUp-display .signup-content .sign input, .login-section .signUp-display .login-content .sign input, .login-section .login-display .signup-content .sign input, .login-section .login-display .login-content .sign input {
+  .signup-section .signUp-display .signup-content .sign input,
+  .signup-section .signUp-display .login-content .sign input,
+  .signup-section .login-display .signup-content .sign input,
+  .signup-section .login-display .login-content .sign input,
+  .login-section .signUp-display .signup-content .sign input,
+  .login-section .signUp-display .login-content .sign input,
+  .login-section .login-display .signup-content .sign input,
+  .login-section .login-display .login-content .sign input {
     width: 80%;
     padding: 15px;
   }
 }
 
-.signup-section .signUp-display .signup-content .sign input::-webkit-input-placeholder, .signup-section .signUp-display .login-content .sign input::-webkit-input-placeholder, .signup-section .login-display .signup-content .sign input::-webkit-input-placeholder, .signup-section .login-display .login-content .sign input::-webkit-input-placeholder, .login-section .signUp-display .signup-content .sign input::-webkit-input-placeholder, .login-section .signUp-display .login-content .sign input::-webkit-input-placeholder, .login-section .login-display .signup-content .sign input::-webkit-input-placeholder, .login-section .login-display .login-content .sign input::-webkit-input-placeholder {
+.signup-section .signUp-display .signup-content .sign input::-webkit-input-placeholder,
+.signup-section .signUp-display .login-content .sign input::-webkit-input-placeholder,
+.signup-section .login-display .signup-content .sign input::-webkit-input-placeholder,
+.signup-section .login-display .login-content .sign input::-webkit-input-placeholder,
+.login-section .signUp-display .signup-content .sign input::-webkit-input-placeholder,
+.login-section .signUp-display .login-content .sign input::-webkit-input-placeholder,
+.login-section .login-display .signup-content .sign input::-webkit-input-placeholder,
+.login-section .login-display .login-content .sign input::-webkit-input-placeholder {
   opacity: 1;
 }
 
-.signup-section .signUp-display .signup-content .sign input:-ms-input-placeholder, .signup-section .signUp-display .login-content .sign input:-ms-input-placeholder, .signup-section .login-display .signup-content .sign input:-ms-input-placeholder, .signup-section .login-display .login-content .sign input:-ms-input-placeholder, .login-section .signUp-display .signup-content .sign input:-ms-input-placeholder, .login-section .signUp-display .login-content .sign input:-ms-input-placeholder, .login-section .login-display .signup-content .sign input:-ms-input-placeholder, .login-section .login-display .login-content .sign input:-ms-input-placeholder {
+.signup-section .signUp-display .signup-content .sign input:-ms-input-placeholder,
+.signup-section .signUp-display .login-content .sign input:-ms-input-placeholder,
+.signup-section .login-display .signup-content .sign input:-ms-input-placeholder,
+.signup-section .login-display .login-content .sign input:-ms-input-placeholder,
+.login-section .signUp-display .signup-content .sign input:-ms-input-placeholder,
+.login-section .signUp-display .login-content .sign input:-ms-input-placeholder,
+.login-section .login-display .signup-content .sign input:-ms-input-placeholder,
+.login-section .login-display .login-content .sign input:-ms-input-placeholder {
   opacity: 1;
 }
 
-.signup-section .signUp-display .signup-content .sign input::-ms-input-placeholder, .signup-section .signUp-display .login-content .sign input::-ms-input-placeholder, .signup-section .login-display .signup-content .sign input::-ms-input-placeholder, .signup-section .login-display .login-content .sign input::-ms-input-placeholder, .login-section .signUp-display .signup-content .sign input::-ms-input-placeholder, .login-section .signUp-display .login-content .sign input::-ms-input-placeholder, .login-section .login-display .signup-content .sign input::-ms-input-placeholder, .login-section .login-display .login-content .sign input::-ms-input-placeholder {
+.signup-section .signUp-display .signup-content .sign input::-ms-input-placeholder,
+.signup-section .signUp-display .login-content .sign input::-ms-input-placeholder,
+.signup-section .login-display .signup-content .sign input::-ms-input-placeholder,
+.signup-section .login-display .login-content .sign input::-ms-input-placeholder,
+.login-section .signUp-display .signup-content .sign input::-ms-input-placeholder,
+.login-section .signUp-display .login-content .sign input::-ms-input-placeholder,
+.login-section .login-display .signup-content .sign input::-ms-input-placeholder,
+.login-section .login-display .login-content .sign input::-ms-input-placeholder {
   opacity: 1;
 }
 
-.signup-section .signUp-display .signup-content .sign input::placeholder, .signup-section .signUp-display .login-content .sign input::placeholder, .signup-section .login-display .signup-content .sign input::placeholder, .signup-section .login-display .login-content .sign input::placeholder, .login-section .signUp-display .signup-content .sign input::placeholder, .login-section .signUp-display .login-content .sign input::placeholder, .login-section .login-display .signup-content .sign input::placeholder, .login-section .login-display .login-content .sign input::placeholder {
+.signup-section .signUp-display .signup-content .sign input::placeholder,
+.signup-section .signUp-display .login-content .sign input::placeholder,
+.signup-section .login-display .signup-content .sign input::placeholder,
+.signup-section .login-display .login-content .sign input::placeholder,
+.login-section .signUp-display .signup-content .sign input::placeholder,
+.login-section .signUp-display .login-content .sign input::placeholder,
+.login-section .login-display .signup-content .sign input::placeholder,
+.login-section .login-display .login-content .sign input::placeholder {
   opacity: 1;
 }
 
-.signup-section .signUp-display .signup-content form, .signup-section .signUp-display .login-content form, .signup-section .login-display .signup-content form, .signup-section .login-display .login-content form, .login-section .signUp-display .signup-content form, .login-section .signUp-display .login-content form, .login-section .login-display .signup-content form, .login-section .login-display .login-content form {
+.signup-section .signUp-display .signup-content form,
+.signup-section .signUp-display .login-content form,
+.signup-section .login-display .signup-content form,
+.signup-section .login-display .login-content form,
+.login-section .signUp-display .signup-content form,
+.login-section .signUp-display .login-content form,
+.login-section .login-display .signup-content form,
+.login-section .login-display .login-content form {
   margin: 20px 0 30px;
-  padding: 0 10px;
+  text-align: center;
 }
 
-.signup-section .signUp-display .signup-content form label, .signup-section .signUp-display .login-content form label, .signup-section .login-display .signup-content form label, .signup-section .login-display .login-content form label, .login-section .signUp-display .signup-content form label, .login-section .signUp-display .login-content form label, .login-section .login-display .signup-content form label, .login-section .login-display .login-content form label {
+@media only screen and (min-width: 901px) {
+  .signup-section .signUp-display .signup-content form .terms-c,
+  .signup-section .signUp-display .login-content form .terms-c,
+  .signup-section .login-display .signup-content form .terms-c,
+  .signup-section .login-display .login-content form .terms-c,
+  .login-section .signUp-display .signup-content form .terms-c,
+  .login-section .signUp-display .login-content form .terms-c,
+  .login-section .login-display .signup-content form .terms-c,
+  .login-section .login-display .login-content form .terms-c {
+    text-align: end;
+    width: 10px;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.signup-section .signUp-display .signup-content form label,
+.signup-section .signUp-display .login-content form label,
+.signup-section .login-display .signup-content form label,
+.signup-section .login-display .login-content form label,
+.login-section .signUp-display .signup-content form label,
+.login-section .signUp-display .login-content form label,
+.login-section .login-display .signup-content form label,
+.login-section .login-display .login-content form label {
   line-height: 1.2;
-  color: #1A286C;
+  color: #1a286c;
   font-family: "Roboto", sans-serif;
+  margin-left: 10px;
 }
 
-.signup-section .signUp-display .signup-content form label a, .signup-section .signUp-display .login-content form label a, .signup-section .login-display .signup-content form label a, .signup-section .login-display .login-content form label a, .login-section .signUp-display .signup-content form label a, .login-section .signUp-display .login-content form label a, .login-section .login-display .signup-content form label a, .login-section .login-display .login-content form label a {
-  color: #1A286C;
+.signup-section .signUp-display .signup-content form label a,
+.signup-section .signUp-display .login-content form label a,
+.signup-section .login-display .signup-content form label a,
+.signup-section .login-display .login-content form label a,
+.login-section .signUp-display .signup-content form label a,
+.login-section .signUp-display .login-content form label a,
+.login-section .login-display .signup-content form label a,
+.login-section .login-display .login-content form label a {
+  color: #1a286c;
   text-decoration: none;
   font-weight: 700;
 }
 
 @media only screen and (min-width: 901px) {
-  .signup-section .signUp-display .signup-content form, .signup-section .signUp-display .login-content form, .signup-section .login-display .signup-content form, .signup-section .login-display .login-content form, .login-section .signUp-display .signup-content form, .login-section .signUp-display .login-content form, .login-section .login-display .signup-content form, .login-section .login-display .login-content form {
+  .signup-section .signUp-display .signup-content form,
+  .signup-section .signUp-display .login-content form,
+  .signup-section .login-display .signup-content form,
+  .signup-section .login-display .login-content form,
+  .login-section .signUp-display .signup-content form,
+  .login-section .signUp-display .login-content form,
+  .login-section .login-display .signup-content form,
+  .login-section .login-display .login-content form {
     margin: 50px 0;
   }
 }
 
-.signup-section .signUp-display .signup-content .signToDashboard, .signup-section .signUp-display .signup-content .logToDashboard, .signup-section .signUp-display .login-content .signToDashboard, .signup-section .signUp-display .login-content .logToDashboard, .signup-section .login-display .signup-content .signToDashboard, .signup-section .login-display .signup-content .logToDashboard, .signup-section .login-display .login-content .signToDashboard, .signup-section .login-display .login-content .logToDashboard, .login-section .signUp-display .signup-content .signToDashboard, .login-section .signUp-display .signup-content .logToDashboard, .login-section .signUp-display .login-content .signToDashboard, .login-section .signUp-display .login-content .logToDashboard, .login-section .login-display .signup-content .signToDashboard, .login-section .login-display .signup-content .logToDashboard, .login-section .login-display .login-content .signToDashboard, .login-section .login-display .login-content .logToDashboard {
+.signup-section .signUp-display .signup-content .signToDashboard,
+.signup-section .signUp-display .signup-content .logToDashboard,
+.signup-section .signUp-display .login-content .signToDashboard,
+.signup-section .signUp-display .login-content .logToDashboard,
+.signup-section .login-display .signup-content .signToDashboard,
+.signup-section .login-display .signup-content .logToDashboard,
+.signup-section .login-display .login-content .signToDashboard,
+.signup-section .login-display .login-content .logToDashboard,
+.login-section .signUp-display .signup-content .signToDashboard,
+.login-section .signUp-display .signup-content .logToDashboard,
+.login-section .signUp-display .login-content .signToDashboard,
+.login-section .signUp-display .login-content .logToDashboard,
+.login-section .login-display .signup-content .signToDashboard,
+.login-section .login-display .signup-content .logToDashboard,
+.login-section .login-display .login-content .signToDashboard,
+.login-section .login-display .login-content .logToDashboard {
   margin: 50px 0;
   padding: 10px;
-  background-color: #1A286C;
+  background-color: #1a286c;
   color: #fff;
   font-family: "Roboto", sans-serif;
   text-decoration: none;
@@ -173,13 +308,35 @@ a:hover {
 }
 
 @media only screen and (min-width: 901px) {
-  .signup-section .signUp-display .signup-content .signToDashboard, .signup-section .signUp-display .signup-content .logToDashboard, .signup-section .signUp-display .login-content .signToDashboard, .signup-section .signUp-display .login-content .logToDashboard, .signup-section .login-display .signup-content .signToDashboard, .signup-section .login-display .signup-content .logToDashboard, .signup-section .login-display .login-content .signToDashboard, .signup-section .login-display .login-content .logToDashboard, .login-section .signUp-display .signup-content .signToDashboard, .login-section .signUp-display .signup-content .logToDashboard, .login-section .signUp-display .login-content .signToDashboard, .login-section .signUp-display .login-content .logToDashboard, .login-section .login-display .signup-content .signToDashboard, .login-section .login-display .signup-content .logToDashboard, .login-section .login-display .login-content .signToDashboard, .login-section .login-display .login-content .logToDashboard {
+  .signup-section .signUp-display .signup-content .signToDashboard,
+  .signup-section .signUp-display .signup-content .logToDashboard,
+  .signup-section .signUp-display .login-content .signToDashboard,
+  .signup-section .signUp-display .login-content .logToDashboard,
+  .signup-section .login-display .signup-content .signToDashboard,
+  .signup-section .login-display .signup-content .logToDashboard,
+  .signup-section .login-display .login-content .signToDashboard,
+  .signup-section .login-display .login-content .logToDashboard,
+  .login-section .signUp-display .signup-content .signToDashboard,
+  .login-section .signUp-display .signup-content .logToDashboard,
+  .login-section .signUp-display .login-content .signToDashboard,
+  .login-section .signUp-display .login-content .logToDashboard,
+  .login-section .login-display .signup-content .signToDashboard,
+  .login-section .login-display .signup-content .logToDashboard,
+  .login-section .login-display .login-content .signToDashboard,
+  .login-section .login-display .login-content .logToDashboard {
     padding: 10px 30px;
   }
 }
 
 @media only screen and (min-width: 901px) {
-  .signup-section .signUp-display .signup-content, .signup-section .signUp-display .login-content, .signup-section .login-display .signup-content, .signup-section .login-display .login-content, .login-section .signUp-display .signup-content, .login-section .signUp-display .login-content, .login-section .login-display .signup-content, .login-section .login-display .login-content {
+  .signup-section .signUp-display .signup-content,
+  .signup-section .signUp-display .login-content,
+  .signup-section .login-display .signup-content,
+  .signup-section .login-display .login-content,
+  .login-section .signUp-display .signup-content,
+  .login-section .signUp-display .login-content,
+  .login-section .login-display .signup-content,
+  .login-section .login-display .login-content {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -187,31 +344,57 @@ a:hover {
     margin: 0;
     width: 60%;
   }
-  .signup-section .signUp-display .signup-content h3, .signup-section .signUp-display .login-content h3, .signup-section .login-display .signup-content h3, .signup-section .login-display .login-content h3, .login-section .signUp-display .signup-content h3, .login-section .signUp-display .login-content h3, .login-section .login-display .signup-content h3, .login-section .login-display .login-content h3 {
+  .signup-section .signUp-display .signup-content h3,
+  .signup-section .signUp-display .login-content h3,
+  .signup-section .login-display .signup-content h3,
+  .signup-section .login-display .login-content h3,
+  .login-section .signUp-display .signup-content h3,
+  .login-section .signUp-display .login-content h3,
+  .login-section .login-display .signup-content h3,
+  .login-section .login-display .login-content h3 {
     margin-top: 0;
     font-size: 30px;
   }
-  .signup-section .signUp-display .signup-content h5, .signup-section .signUp-display .login-content h5, .signup-section .login-display .signup-content h5, .signup-section .login-display .login-content h5, .login-section .signUp-display .signup-content h5, .login-section .signUp-display .login-content h5, .login-section .login-display .signup-content h5, .login-section .login-display .login-content h5 {
+  .signup-section .signUp-display .signup-content h5,
+  .signup-section .signUp-display .login-content h5,
+  .signup-section .login-display .signup-content h5,
+  .signup-section .login-display .login-content h5,
+  .login-section .signUp-display .signup-content h5,
+  .login-section .signUp-display .login-content h5,
+  .login-section .login-display .signup-content h5,
+  .login-section .login-display .login-content h5 {
     font-size: 18px;
   }
 }
 
-.signup-section .signUp-display .p, .signup-section .login-display .p, .login-section .signUp-display .p, .login-section .login-display .p {
+.signup-section .signUp-display .p,
+.signup-section .login-display .p,
+.login-section .signUp-display .p,
+.login-section .login-display .p {
   margin-top: 30px;
 }
 
 @media only screen and (min-width: 901px) {
-  .signup-section .signUp-display .p, .signup-section .login-display .p, .login-section .signUp-display .p, .login-section .login-display .p {
+  .signup-section .signUp-display .p,
+  .signup-section .login-display .p,
+  .login-section .signUp-display .p,
+  .login-section .login-display .p {
     margin-top: 50px;
   }
 }
 
-.signup-section .signUp-display .image-container, .signup-section .login-display .image-container, .login-section .signUp-display .image-container, .login-section .login-display .image-container {
+.signup-section .signUp-display .image-container,
+.signup-section .login-display .image-container,
+.login-section .signUp-display .image-container,
+.login-section .login-display .image-container {
   display: none;
 }
 
 @media only screen and (min-width: 901px) {
-  .signup-section .signUp-display .image-container, .signup-section .login-display .image-container, .login-section .signUp-display .image-container, .login-section .login-display .image-container {
+  .signup-section .signUp-display .image-container,
+  .signup-section .login-display .image-container,
+  .login-section .signUp-display .image-container,
+  .login-section .login-display .image-container {
     display: block;
     -webkit-box-flex: 50%;
         -ms-flex: 50%;
@@ -220,7 +403,10 @@ a:hover {
     border: 1px solid black;
     overflow: hidden;
   }
-  .signup-section .signUp-display .image-container .overlaytext, .signup-section .login-display .image-container .overlaytext, .login-section .signUp-display .image-container .overlaytext, .login-section .login-display .image-container .overlaytext {
+  .signup-section .signUp-display .image-container .overlaytext,
+  .signup-section .login-display .image-container .overlaytext,
+  .login-section .signUp-display .image-container .overlaytext,
+  .login-section .login-display .image-container .overlaytext {
     display: block;
     position: absolute;
     color: #fff;
@@ -228,18 +414,27 @@ a:hover {
     right: 18%;
     text-align: center;
   }
-  .signup-section .signUp-display .image-container .overlaytext h3, .signup-section .login-display .image-container .overlaytext h3, .login-section .signUp-display .image-container .overlaytext h3, .login-section .login-display .image-container .overlaytext h3 {
+  .signup-section .signUp-display .image-container .overlaytext h3,
+  .signup-section .login-display .image-container .overlaytext h3,
+  .login-section .signUp-display .image-container .overlaytext h3,
+  .login-section .login-display .image-container .overlaytext h3 {
     margin: 0 0 5px;
     font-size: 30px;
     color: #cfd5d3;
     font-family: "Pacifico", cursive;
   }
-  .signup-section .signUp-display .image-container .overlaytext h4, .signup-section .login-display .image-container .overlaytext h4, .login-section .signUp-display .image-container .overlaytext h4, .login-section .login-display .image-container .overlaytext h4 {
+  .signup-section .signUp-display .image-container .overlaytext h4,
+  .signup-section .login-display .image-container .overlaytext h4,
+  .login-section .signUp-display .image-container .overlaytext h4,
+  .login-section .login-display .image-container .overlaytext h4 {
     margin: 0;
     font-family: "Pacifico", cursive;
     color: #cfd5d3;
   }
-  .signup-section .signUp-display .image-container .image, .signup-section .login-display .image-container .image, .login-section .signUp-display .image-container .image, .login-section .login-display .image-container .image {
+  .signup-section .signUp-display .image-container .image,
+  .signup-section .login-display .image-container .image,
+  .login-section .signUp-display .image-container .image,
+  .login-section .login-display .image-container .image {
     width: 100%;
     position: absolute;
     top: 0;
@@ -250,7 +445,10 @@ a:hover {
 }
 
 @media only screen and (min-width: 901px) {
-  .signup-section .signUp-display, .signup-section .login-display, .login-section .signUp-display, .login-section .login-display {
+  .signup-section .signUp-display,
+  .signup-section .login-display,
+  .login-section .signUp-display,
+  .login-section .login-display {
     position: relative;
     width: 100%;
     display: -webkit-box;
@@ -270,12 +468,12 @@ a:hover {
 }
 
 .account-section {
-  background-color: #F1F2F5;
+  background-color: #f1f2f5;
   height: 100vh;
 }
 
 .account-section .header {
-  background-color: #1A286C;
+  background-color: #1a286c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -313,7 +511,7 @@ a:hover {
 
 .account-section .header nav a {
   font-family: "Roboto", sans-serif;
-  color: #1A286C;
+  color: #1a286c;
   text-decoration: none;
   color: #fff;
   font-size: 16px;
@@ -346,7 +544,7 @@ a:hover {
   margin: 8px 0;
   border: 5px solid whitesmoke;
   border-radius: 5px;
-  background-color: #1A286C;
+  background-color: #1a286c;
 }
 
 .account-section .account-content .friends .friend h1 {
@@ -376,7 +574,7 @@ a:hover {
   text-align: center;
   margin: 0;
   padding: 10px 10px 5px;
-  color: #1A286C;
+  color: #1a286c;
   background-color: #fff;
   border-radius: 50%;
   width: 10px;

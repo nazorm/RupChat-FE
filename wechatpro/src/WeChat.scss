@@ -1,316 +1,302 @@
-$font-family : 'Roboto', sans-serif;
-$light-color: #1A286C;
-$main-color:#fff ;
+$font-family: "Roboto", sans-serif;
+$light-color: #1a286c;
+$main-color: #fff;
 $btn-text: blue;
-$header-color: #F1F2F5;
-$dancing-font: 'Pacifico', cursive;
+$header-color: #f1f2f5;
+$dancing-font: "Pacifico", cursive;
 
-
-
-    .header{
-        background-color: $light-color;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 20px;
-        font-family: $font-family;
-        color: $main-color;
-        h3{
-            font-size: 18px; 
-            @media only  screen and (min-width: 901px){
-                font-size: 20px;
-            }
-        }
-        nav{
-         display: flex;
-         justify-content: space-between;
-         width: 120px;
-         a{
-             font-size: 16px;
-            font-family: $font-family;
-            font-weight: 300;
-            color: $main-color;
-            text-decoration: none;
-            @media only  screen and (min-width: 901px){
-                font-size: 20px;
-            }
-         }
-         @media only  screen and (min-width: 901px){
-            width: 150px;
-         }
-        }
-        @media only  screen and (min-width: 901px){
-            padding: 0 100px;
-            
-        }
-
+.header {
+  background-color: $light-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  font-family: $font-family;
+  color: $main-color;
+  h3 {
+    font-size: 18px;
+    margin: 20px 0;
+    @media only screen and (min-width: 901px) {
+      font-size: 20px;
     }
-    
-    a:hover{
-       opacity: 0.5;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    a {
+      font-size: 16px;
+      font-family: $font-family;
+      font-weight: 300;
+      color: $main-color;
+      text-decoration: none;
+      @media only screen and (min-width: 901px) {
+        font-size: 20px;
+      }
     }
-  
-.container{
-    background-color: $header-color;
-    width: 100%;
-   @media only  screen and (min-width: 901px){
-   
+    @media only screen and (min-width: 901px) {
+      width: 150px;
+    }
+  }
+  @media only screen and (min-width: 901px) {
+    padding: 0 100px;
+  }
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+.container {
+  background-color: $header-color;
+  width: 100%;
+  @media only screen and (min-width: 901px) {
     border-radius: 10px;
     width: 80%;
     height: 700px;
-    margin: 40px auto ;
+    margin: 40px auto;
     padding: 0;
-   border: 1px solid rgba(0, 0, 0, 0.15);
-   }
-   
+    border: 1px solid rgba(0, 0, 0, 0.15);
+  }
 }
 
-.signup-section, .login-section{
-    .signUp-display, .login-display{   
-        height: 100vh;  
-        .signup-content, .login-content{
-            text-align: center;
-            padding: 120px 0 ;
-            flex: 50%;
-            width: 100%;
-           
-            h3,h5{
-                margin:0 0 10px;
-                color: $light-color;
-                font-family: $font-family;
-                font-weight: 700;
-                font-size: 20px;
-            }
-            .sign{
-                text-align: center;
-                margin: 10px 0  50px;
-                input{
-                    margin: 5px 0;
-                    padding: 8px;
-                    border-radius: 5px;
-                    border: 1px solid rgba(0, 0, 0, 0.15);
-                    background-color: $main-color;
-                    color: $light-color;
-                   
-                    @media only  screen and (min-width: 901px){
-                        width: 80%;
-                        padding: 15px;
-                    }
-                }
-                input::placeholder{
-                    opacity: 1;
-                }
-            }
-            form{
-                margin: 20px 0 30px;
-                padding: 0 10px;
-                label{
-                   line-height: 1.2;
-                   color: $light-color;
-                   font-family: $font-family;
-                   a{
-                    color: $light-color;
-                    text-decoration: none;
-                    font-weight: 700;
-                   }
-                }
-                @media only  screen and (min-width: 901px){
-                   margin: 50px 0;
+.signup-section,
+.login-section {
+  .signUp-display,
+  .login-display {
+    height: 100vh;
+    .signup-content,
+    .login-content {
+      text-align: center;
+      padding: 120px 0;
+      flex: 50%;
+      width: 100%;
 
-                }
-            }
-            .signToDashboard, .logToDashboard{
-                margin: 50px 0;
-                padding: 10px;
-                background-color: $light-color;
-                color: $main-color;
-                font-family: $font-family;
-                text-decoration: none;
-                font-weight: 500;
-                border-radius: 15px 0 5px 0;
+      h3,
+      h5 {
+        margin: 0 0 10px;
+        color: $light-color;
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 20px;
+      }
+      .sign {
+        text-align: center;
+        margin: 10px 0 50px;
+        input {
+          margin: 5px 0;
+          padding: 8px;
+          border-radius: 5px;
+          border: 1px solid rgba(0, 0, 0, 0.15);
+          background-color: $main-color;
+          color: $light-color;
 
-                @media only  screen and (min-width: 901px){
-                    padding: 10px 30px;
-                   
-                }
-            }
-           
-            @media only  screen and (min-width: 901px){
-                align-self: center;
-                padding: 0;
-                margin: 0;
-                width: 60%;
-                h3{
-                    margin-top: 0;
-                    font-size: 30px;
-                }
-                h5{
-                    font-size: 18px;
-                }
-            }
+          @media only screen and (min-width: 901px) {
+            width: 80%;
+            padding: 15px;
+          }
         }
-        .p{
-            margin-top: 30px;
-            @media only  screen and (min-width: 901px){
-                margin-top: 50px;
-                
-            }
+        input::placeholder {
+          opacity: 1;
         }
-        .image-container{
-            display: none;
-            @media only  screen and (min-width: 901px){
-                display: block;
-                flex: 50%;
-                width: 100%;
-                border: 1px solid black;
-                overflow: hidden;
-                .overlaytext{
-                   display: block;
-                   position: absolute;
-                   color: $main-color;
-                   top: 40%;
-                   right: 18%;
-                   text-align: center;
-                   
-                   h3{
-                    margin: 0 0 5px;
-                    font-size: 30px;
-                    color: #cfd5d3;
-                    font-family: $dancing-font;
-                }
-                h4{
-                    margin: 0; 
-                    font-family: $dancing-font;
-                    color: #cfd5d3;
-                }
-               }
-                
-                .image{
-                    width: 100%;
-                    position: absolute;
-                    top:0;
-                    height: 700px;
-                    filter: brightness(70%);
-                  
-                }
-                
-            }
-        }
-        @media only  screen and (min-width: 901px){
-            position: relative;
-           width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            overflow: hidden;
+      }
+      form {
+        margin: 20px 0 30px;
+        text-align: center;
+       
+        .terms-c{
+          @media only screen and (min-width: 901px) {
+            text-align: end;
+            width: 10px;
             padding: 0;
             margin: 0;
-            height: 700px;
+          }
         }
-    }
-    @media only  screen and (min-width: 901px){
-        
-    }
-}
-
-
-
-
-
-
-
-.account-section{
-background-color: $header-color;
-height: 100vh;
-    .header{
-        background-color: $light-color;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 20px;
-        font-family: $font-family;
-        font-weight: 300;
-        color: $main-color;
-        h3{
-            font-size: 18px;
-            @media only  screen and (min-width: 901px){
-                font-size: 20px;
-            }
-        }
-        nav{
-         display: flex;
-         justify-content: space-between;
-         width: 120px;
-         a{
-            font-family: $font-family;
+        label {
+          line-height: 1.2;
+          color: $light-color;
+          font-family: $font-family;
+          margin-left: 10px;
+          a {
             color: $light-color;
             text-decoration: none;
-            color: $main-color;
-            font-size: 16px;
-            @media only  screen and (min-width: 901px){
-                font-size: 20px;
-            }
-         }
-         @media only  screen and (min-width: 901px){
-            width: 150px;
-         }
+            font-weight: 700;
+          }
         }
-        @media only  screen and (min-width: 901px){
-            padding: 0 100px;
-            
+        @media only screen and (min-width: 901px) {
+          margin: 50px 0;
         }
+      }
+      .signToDashboard,
+      .logToDashboard {
+        margin: 50px 0;
+        padding: 10px;
+        background-color: $light-color;
+        color: $main-color;
+        font-family: $font-family;
+        text-decoration: none;
+        font-weight: 500;
+        border-radius: 15px 0 5px 0;
+
+        @media only screen and (min-width: 901px) {
+          padding: 10px 30px;
+        }
+      }
+
+      @media only screen and (min-width: 901px) {
+        align-self: center;
+        padding: 0;
+        margin: 0;
+        width: 60%;
+        h3 {
+          margin-top: 0;
+          font-size: 30px;
+        }
+        h5 {
+          font-size: 18px;
+        }
+      }
     }
-    .account-content{
-        margin-top: 10px;
-        .friends{
-        .friend{
-            padding: 0 15px;
-            margin: 8px 0;
-            border: 5px solid whitesmoke;
-            border-radius: 5px;
-            background-color: $light-color;
-            h1{
-              margin: 0;
-              color: $main-color;
-            }
-            .chatPreview{
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                margin:  0;
-                
-                h4{
-                    margin: 0;
-                    color: $main-color;
-                }
-                h5{
-                    text-align: center;
-                    margin: 0;
-                    padding: 10px 10px 5px;
-                    color: $light-color;
-                    background-color: $main-color;
-                    border-radius: 50%;
-                    width: 10px;
-
-                }
-                
-            }
-        }
-        @media only  screen and (min-width: 901px){
-           width: 40%;
-            
-        }
-        }
+    .p {
+      margin-top: 30px;
+      @media only screen and (min-width: 901px) {
+        margin-top: 50px;
+      }
     }
+    .image-container {
+      display: none;
+      @media only screen and (min-width: 901px) {
+        display: block;
+        flex: 50%;
+        width: 100%;
+        border: 1px solid black;
+        overflow: hidden;
+        .overlaytext {
+          display: block;
+          position: absolute;
+          color: $main-color;
+          top: 40%;
+          right: 18%;
+          text-align: center;
 
+          h3 {
+            margin: 0 0 5px;
+            font-size: 30px;
+            color: #cfd5d3;
+            font-family: $dancing-font;
+          }
+          h4 {
+            margin: 0;
+            font-family: $dancing-font;
+            color: #cfd5d3;
+          }
+        }
 
-
-
-
-
-
-    @media only  screen and (min-width: 901px){
-        
+        .image {
+          width: 100%;
+          position: absolute;
+          top: 0;
+          height: 700px;
+          filter: brightness(70%);
+        }
+      }
     }
+    @media only screen and (min-width: 901px) {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+      height: 700px;
+    }
+  }
+  @media only screen and (min-width: 901px) {
+  }
 }
 
+.account-section {
+  background-color: $header-color;
+  height: 100vh;
+  .header {
+    background-color: $light-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-family: $font-family;
+    font-weight: 300;
+    color: $main-color;
+    h3 {
+      font-size: 18px;
+      @media only screen and (min-width: 901px) {
+        font-size: 20px;
+      }
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      width: 120px;
+      a {
+        font-family: $font-family;
+        color: $light-color;
+        text-decoration: none;
+        color: $main-color;
+        font-size: 16px;
+        @media only screen and (min-width: 901px) {
+          font-size: 20px;
+        }
+      }
+      @media only screen and (min-width: 901px) {
+        width: 150px;
+      }
+    }
+    @media only screen and (min-width: 901px) {
+      padding: 0 100px;
+    }
+  }
+  .account-content {
+    margin-top: 10px;
+    .friends {
+      .friend {
+        padding: 0 15px;
+        margin: 8px 0;
+        border: 5px solid whitesmoke;
+        border-radius: 5px;
+        background-color: $light-color;
+        h1 {
+          margin: 0;
+          color: $main-color;
+        }
+        .chatPreview {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: 0;
+
+          h4 {
+            margin: 0;
+            color: $main-color;
+          }
+          h5 {
+            text-align: center;
+            margin: 0;
+            padding: 10px 10px 5px;
+            color: $light-color;
+            background-color: $main-color;
+            border-radius: 50%;
+            width: 10px;
+          }
+        }
+      }
+      @media only screen and (min-width: 901px) {
+        width: 40%;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 901px) {
+  }
+}

@@ -1,0 +1,96 @@
+.profile-container {
+  background-color: #f1f2f5;
+  width: 100%;
+  height: 100vh;
+  border-radius: 10px;
+  text-align: center;
+  color: #1a286c;
+}
+
+@media only screen and (min-width: 901px) {
+  .profile-container {
+    margin: 40px auto;
+    width: 500px;
+    height: 600px;
+  }
+}
+
+h1 {
+  padding: 40px 0 0;
+  margin: 0;
+}
+
+.changeprofile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.changeprofile h3 {
+  margin: 0 10px 0 0;
+}
+
+.changeprofile button {
+  margin: 0;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  font-weight: 700;
+}
+
+input {
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  color: #1a286c;
+}
+
+@media only screen and (min-width: 901px) {
+  input {
+    width: 80%;
+    padding: 15px;
+  }
+}
+
+input::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+input:-ms-input-placeholder {
+  opacity: 1;
+}
+
+input::-ms-input-placeholder {
+  opacity: 1;
+}
+
+input::placeholder {
+  opacity: 1;
+}
+
+.profile-submit-btn {
+  margin: 50px 0;
+  padding: 10px;
+  background-color: #1a286c;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 15px 0 5px 0;
+}
+
+@media only screen and (min-width: 901px) {
+  .profile-submit-btn {
+    padding: 10px 30px;
+  }
+}
