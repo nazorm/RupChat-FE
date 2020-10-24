@@ -59,28 +59,24 @@ class  Login extends React.Component {
           <section className="login-section">
             <div className="login-display">
               <div className="login-content">
-                <h3>Welcome to WeChat</h3>
-                <h5>Log In to join the Trybe!</h5>
-                <div className="sign">
+                <h3>Welcome Back</h3>
+                <h5>Log In</h5>
+                <form onSubmit={this.login} className="sign">
                   <input
-                    type="text"
-                    placeholder="Enter your Email"
-                    className="email"
+                      type="text"
+                      placeholder="Email"
+                      className="email"
                   />
                   <br />
                   <input
-                    type="password"
-                    placeholder="Password"
-                    className="password"
+                      type="password"
+                      placeholder="Password"
+                      className="password"
                   />
-                </div>
-                <a
-                  href="#"
-                  className="logToDashboard"
-                  onClick={this.login}
-                >
-                  Happy Chatting
-                </a>
+
+                  <button type="submit" className="logToDashboard">Log In</button>
+                </form>
+
                 <p className="p">
                   Don't have an account? <Link to="/">Sign up</Link>
                 </p>
