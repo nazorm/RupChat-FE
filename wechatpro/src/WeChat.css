@@ -585,3 +585,12 @@ a:hover {
     width: 40%;
   }
 }
+
+.emailFormat, .passwordNumber, .passwordMatch, .checkboxErrorMessage {
+  color: red;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  text-align: start;
+  padding: 0 0 0 55px;
+}

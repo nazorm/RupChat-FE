@@ -26,6 +26,10 @@ class  Signup extends React.Component {
   let password = document.querySelector(".password");
   let confirmedPassword = document.querySelector(".confirmPassword");
   let terms = document.querySelector(".terms-c");
+  let emailFormat = document.querySelector(".emailFormat");
+  let  passwordNumber = document.querySelector(".passwordNumber");
+  let passwordMatch = document.querySelector(".passwordMatch");
+  let checkboxErrorMessage = document.querySelector(".checkboxErrorMessage");
   this.setState({
     register: {
       email: email.value,
@@ -38,11 +42,14 @@ class  Signup extends React.Component {
   });
 
   if (!email.value.includes(".com")) {
-    alert("wrong email format");
+    emailFormat.innerHTML = "wrong email format"
   } else if (password.value.length < 6) {
-    alert("passwords must contain six characters or more");
-  } else if (!terms.checked) {
-    alert("terms and conditions");
+    emailFormat.innerHTML = ""
+    passwordNumber.innerHTML = "passwords must contain six characters or more"
+  } else if(confirmedPassword.value !== password.value){
+    passwordMatch.innerHTML = "passwords do not match"
+  }else if (!terms.checked) {
+    checkboxErrorMessage.innerHTML = "do you accept the terms and conditions?"
   } else {
     fetch("https://wechatpro.herokuapp.com/api/accounts/register", {
       method: "POST",
@@ -92,20 +99,24 @@ return (
                   placeholder="johndoe@gmail.com"
                   className="email"
                 />
+                 <p className = "emailFormat"></p>
                 <br />
                 <input
                   type="password"
                   placeholder="Password"
                   className="password"
                 />
+                 <p className = "passwordNumber"></p>
                 <br />
                 <input
                   type="password"
                   placeholder="Confirm Password"
                   className="confirmPassword"
                 />
+                <p className = "passwordMatch"></p>
               </div>
               <form action="">
+              <p className = "checkboxErrorMessage"></p>
                 <input type="checkbox" className="terms-c" />
                 <label htmlFor="terms">
                   I accept the <a href="#">terms and conditions</a> that guide

@@ -300,3 +300,11 @@ a:hover {
   @media only screen and (min-width: 901px) {
   }
 }
+.emailFormat, .passwordNumber, .passwordMatch, .checkboxErrorMessage{
+  color: red;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  text-align: start;
+  padding: 0 0 0 55px;
+}
