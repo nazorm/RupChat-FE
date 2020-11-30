@@ -22,7 +22,7 @@ class Account extends React.Component {
 			.then((resp) => resp.json())
 			.then((d) => {
         this.setState({
-          serviceUsers : d.data
+          serviceUsers : d.data,
         })
 			});
 	}
