@@ -1,6 +1,6 @@
 import React from "react";
 import image from "./road-image.jpg";
-import "./WeChat.css";
+import "./WeChat.scss";
 import { Link } from "react-router-dom";
 
 
@@ -20,7 +20,8 @@ class  Signup extends React.Component {
   this.signup = this.signup.bind(this)
  }
 
- signup() {
+ signup(e) {
+  e.preventDefault()
   let userName = document.querySelector(".userName");
   let email = document.querySelector(".email");
   let password = document.querySelector(".password");
@@ -44,7 +45,6 @@ class  Signup extends React.Component {
   if (!email.value.includes(".com")) {
     emailFormat.innerHTML = "wrong email format"
   } else if (password.value.length < 6) {
-    emailFormat.innerHTML = ""
     passwordNumber.innerHTML = "passwords must contain six characters or more"
   } else if(confirmedPassword.value !== password.value){
     passwordMatch.innerHTML = "passwords do not match"
@@ -68,9 +68,14 @@ class  Signup extends React.Component {
         registration_id: "wechatPro-test",
       }),
     })
-      .then((resp) => resp.json())
+      .then((resp)=>{
+      console.log(resp)
+    return resp.json()
+      })
       .then((d)=>{
         localStorage.setItem("accessToken", d.data.access_token )
+        localStorage.setItem("refreshToken", d.data.refesh_token)
+        console.log(d)
         this.props.history.push("/pages/Profile")
       })
   }
@@ -85,51 +90,28 @@ return (
           <div className="signUp-display">
             <div className="signup-content">
               <h3>Welcome to WeChat</h3>
-              <h5>Sign Up to join the Trybe!</h5>
-              <form action="" className="sign"></form>
-              <div className="sign">
-                <input
-                  type="text"
-                  placeholder="Username"
-                  className="userName"
-                />
-                <br />
-                <input
-                  type="text"
-                  placeholder="johndoe@gmail.com"
-                  className="email"
-                />
-                 <p className = "emailFormat"></p>
-                <br />
-                <input
-                  type="password"
-                  placeholder="Password"
-                  className="password"
-                />
-                 <p className = "passwordNumber"></p>
-                <br />
-                <input
-                  type="password"
-                  placeholder="Confirm Password"
-                  className="confirmPassword"
-                />
-                <p className = "passwordMatch"></p>
-              </div>
-              <form action="">
-              <p className = "checkboxErrorMessage"></p>
-                <input type="checkbox" className="terms-c" />
-                <label htmlFor="terms">
-                  I accept the <a href="#">terms and conditions</a> that guide
-                  the <a href="#">operations</a> of this organization
-                </label>
+
+              <h5>Join the Trybe!</h5>
+              <form onSubmit = {this.signup} className="sign">
+                  <input type="text" placeholder="Username" className="userName"/>
+                  <input type="text" placeholder="Email" className="email"/>
+                  <input type="password" placeholder="Password" className="password"/>
+                  <input type="password" placeholder="Confirm Password" className="confirmPassword"/>
+                  <div className="terms-c-container">
+                    <input type="checkbox" className="terms-c" id="terms"/>
+                    <label htmlFor="terms">
+                          I accept Wechat's <a href="#">terms of use</a>
+                      </label>
+                  </div>
+                <button type="submit" className="signToDashboard">Sign Up</button>
               </form>
-              <a
-                href="#"
-                className="signToDashboard"
-                onClick={this.signup}
-              >
-                Happy Chatting
-              </a>
+              <p className = 'emailFormat'></p>
+              <p className = 'passwordNumber'></p>
+              <p className = 'passwordMatch'></p>
+              <p className = 'checkboxErrorMessage'></p>
+
+
+
 
               <p className="p">
                 Have an account? <Link to="/Login">Log In</Link>

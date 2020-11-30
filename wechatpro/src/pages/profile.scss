@@ -4,11 +4,12 @@ $main-color: #fff;
 $btn-text: blue;
 $header-color: #f1f2f5;
 $dancing-font: "Pacifico", cursive;
+$secondary-font-family: "Overpass", sans-serif;
+$light-grey-color: #38464d;
 
 
 
 .profile-container{
-    background-color: $header-color;
     width: 100%;
     height: 100vh;
     border-radius: 10px;
@@ -45,21 +46,27 @@ button{
 }
 
 input {
-    margin: 5px 0;
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    background-color: $main-color;
-    color: $light-color;
+  padding: 10px 0;
+  font-size: 16px;
+  color: $light-grey-color;
+  background-color: transparent;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid $light-color;
+  border-radius: 0;
+  outline: none;
+  
+  width: 100%;
 
-    @media only screen and (min-width: 901px) {
-      width: 80%;
-      padding: 15px;
-    }
+  @media only screen and (min-width: 901px) {
+    padding: 15px;
   }
-  input::placeholder {
-    opacity: 1;
-  }
+}
+input::placeholder {
+  opacity: 1;
+  font-family: $secondary-font-family;
+  font-size: 14px;
+}
 .profile-submit-btn{
   margin: 50px 0;
   padding: 10px;

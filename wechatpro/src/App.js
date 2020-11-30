@@ -12,6 +12,8 @@ import "./App.css";
 import Login from "./Login";
 import Header from "./Header";
 import Profile from "./pages/Profile";
+import Account from './pages/Account';
+import ChatRoom from './pages/ChatRoom';
 
 class App extends React.Component {
   constructor() {
@@ -42,6 +44,8 @@ class App extends React.Component {
               component={Login}
             />
             <Route exact path = "/pages/Profile" component = {Profile}/>
+            <Route exact path = "/pages/Account" component = {Account}/>
+            <Route path ="/pages/chatroom/:user" component={ChatRoom}/>
           </Switch>
         </div>
       </Router>

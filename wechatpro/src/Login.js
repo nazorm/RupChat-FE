@@ -15,7 +15,8 @@ class  Login extends React.Component {
     }
     this.login = this.login.bind(this)
   }
-  login() {
+  login(e) {
+	  e.preventDefault()
     let email = document.querySelector(".email");
     let password = document.querySelector(".password");
     this.setState({
@@ -34,6 +35,7 @@ class  Login extends React.Component {
     } else {
       fetch("https://wechatpro.herokuapp.com/api/accounts/login", {
         method: "POST",
+        credentials: 'include',
         headers: {
           "Content-Type": "application/json",
           Authorization:
@@ -44,9 +46,12 @@ class  Login extends React.Component {
           password: password.value,
         }),
       })
-        .then((resp) => resp.json())
+        .then((resp)=>{
+          return resp.json()
+        })
         .then((d)=>{
           localStorage.setItem("accessToken", d.data.access_token )
+          localStorage.setItem("refreshToken", d.data.refesh_token)
           this.props.history.push("/pages/Profile")
         })
     }
@@ -59,28 +64,24 @@ class  Login extends React.Component {
           <section className="login-section">
             <div className="login-display">
               <div className="login-content">
-                <h3>Welcome to WeChat</h3>
-                <h5>Log In to join the Trybe!</h5>
-                <div className="sign">
+                <h3>Welcome Back</h3>
+                <h5>Log In</h5>
+                <form onSubmit={this.login} className="sign">
                   <input
-                    type="text"
-                    placeholder="Enter your Email"
-                    className="email"
+                      type="text"
+                      placeholder="Email"
+                      className="email"
                   />
                   <br />
                   <input
-                    type="password"
-                    placeholder="Password"
-                    className="password"
+                      type="password"
+                      placeholder="Password"
+                      className="password"
                   />
-                </div>
-                <a
-                  href="#"
-                  className="logToDashboard"
-                  onClick={this.login}
-                >
-                  Happy Chatting
-                </a>
+
+                  <button type="submit" className="logToDashboard">Log In</button>
+                </form>
+
                 <p className="p">
                   Don't have an account? <Link to="/">Sign up</Link>
                 </p>

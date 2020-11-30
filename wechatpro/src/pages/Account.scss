@@ -1,0 +1,71 @@
+$font-family : 'Roboto', sans-serif;
+$light-color: #1A286C;
+$main-color:#fff ;
+$btn-text: blue;
+$header-color: #F1F2F5;
+$dancing-font: 'Pacifico', cursive;
+$light-grey-color: #38464d;
+$light-grey : gainsboro;
+
+
+
+
+.account-section {
+  background-color: $header-color;
+  height: 100vh;
+
+  .account-content {
+    margin-top: 10px;
+    background-color: $light-grey;
+    .friends {
+      .friend {
+        text-decoration: none;
+        margin: 0;
+        border-bottom: 1px solid whitesmoke;
+        border-radius: 5px;
+        background-color: $light-color;
+        display: flex;
+        justify-content: space-between;
+        h1 {
+          padding: 0;
+          margin: 10px 0;
+          color: $main-color;
+          font-size: 20px;
+          align-self: center;
+        }
+        span {
+          background-color: grey; 
+          align-self: center;
+          margin: 10px 0 10px 2px;
+          color: $light-color;
+          -webkit-border-radius:8px;
+          -moz-border-radius:8px;
+          border-radius:8px;
+          width:8px;
+          height:8px;
+           &.is-online {
+                 background-color: lightgreen;
+           }
+         }
+      }
+      @media only screen and (min-width: 901px) {
+        width: 30%;
+        border-right: 6px solid $light-color;
+        padding: 0;
+        margin-right: 0;
+      }
+    }
+    .chatArea{
+        background-color: $light-grey;
+        height: 800px;
+        width: 70%;
+
+
+    }
+    @media only screen and (min-width: 901px) {
+       display: flex;
+       margin-top: 0;
+
+      }
+  }
+}
