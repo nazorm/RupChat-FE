@@ -6,7 +6,7 @@ class ChatRoom extends React.Component{
     constructor(){
         super()
         this.state = {
-         user : '',
+         user : "",
         }
     }
     componentDidMount(){
