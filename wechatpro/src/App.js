@@ -45,7 +45,7 @@ class App extends React.Component {
             />
             <Route exact path = "/pages/Profile" component = {Profile}/>
             <Route exact path = "/pages/Account" component = {Account}/>
-            <Route path ="/pages/chatroom/:user" component={ChatRoom}/>
+            <Route path ="/pages/chatroom/:id" component={ChatRoom}/>
           </Switch>
         </div>
       </Router>

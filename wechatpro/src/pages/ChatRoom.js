@@ -12,15 +12,12 @@ class ChatRoom extends React.Component{
     componentDidMount(){
         console.log(this.props)
         let accessToken = localStorage.getItem('accessToken');
-        fetch('https://wechatpro.herokuapp.com/api/chat/history/messages', {
-           method : 'POST',
+        fetch(`https://wechatpro.herokuapp.com/api/chat/history/messages?page=1&user_id=${this.props.match.params.id}`, {
+           method : 'GET',
            headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${accessToken}`,
         },
-        body: JSON.stringify({
-            "username" : this.props.match.params.user
-          }),
         })
     }
     render(){
