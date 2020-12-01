@@ -23,7 +23,7 @@ class Account extends React.Component {
 			.then((d) => {
         this.setState({
           serviceUsers : d.data,
-        })
+		})
 			});
 	}
 
@@ -31,7 +31,7 @@ class Account extends React.Component {
 
    const friend = this.state.serviceUsers.map((d)=>{
      return (
-      <Link to={`/pages/chatroom/${d.username}`} className="friend" key = {d.id}>
+      <Link to={`/pages/chatroom/${d.id}`} className="friend" key = {d.id}>
       <h1>{d.username}</h1>
       <span className={d.online? 'isOnline': ''}></span>
     </Link>
