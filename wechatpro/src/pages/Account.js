@@ -31,10 +31,12 @@ class Account extends React.Component {
 
    const friend = this.state.serviceUsers.map((d)=>{
      return (
-      <Link to={`/pages/chatroom/${d.id}`} className="friend" key = {d.id}>
+		 <div key = {d.id}>
+      <Link to={`/pages/chatroom/${d.id}`} className="friend">
       <h1>{d.username}</h1>
       <span className={d.online? 'isOnline': ''}></span>
     </Link>
+	</div>
      )
    })
   

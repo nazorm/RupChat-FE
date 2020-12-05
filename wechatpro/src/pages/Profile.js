@@ -14,7 +14,7 @@ class Profile extends React.Component {
       },
     };
     this.submit = this.submit.bind(this);
-    this.edit = this.edit.bind(this);
+    this.handleUserValue = this.handleUserValue.bind(this)
    //[] this.getNewAccessToken = this.getNewAccessToken.bind(this)
   }
 
@@ -29,46 +29,21 @@ class Profile extends React.Component {
     })
       .then((resp) => resp.json())
       .then((d) => {
-        this.getuserinfo(d.data);
+        document.querySelector(".username").value = d.data.username
+        document.querySelector(".email").value = d.data.email
       });
   }
-  getuserinfo(d) {
-    let userName = document.querySelector(".username");
-    let email = document.querySelector(".email");
-
-    document.querySelector(".firstname").disabled = true;
-    document.querySelector(".lastname").disabled = true;
-    document.querySelector(".phonenumber").disabled = true;
-    document.querySelector(".home-address").disabled = true;
-
-    userName.value = d.username;
-    email.value = d.email;
+  handleUserValue(e){
+e.preventDefault()
+this.setState({
+  [e.target.name] : e.target.value
+})
   }
-  edit() {
-    document.querySelector(".username").disabled = true;
-    document.querySelector(".email").disabled = true;
-    document.querySelector(".firstname").disabled = false;
-    document.querySelector(".lastname").disabled = false;
-    document.querySelector(".phonenumber").disabled = false;
-    document.querySelector(".home-address").disabled = false;
-  }
+  
   submit(e) {
-    e.preventDefault();
+    e.preventDefault()
     let userToken = localStorage.getItem("accessToken");
-
-    let fname = document.querySelector(".firstname");
-    let lname = document.querySelector(".lastname");
-    let number = document.querySelector(".phonenumber");
-    let address = document.querySelector(".home-address");
-    // this.setState({
-    //     profile : {
-    //         fname: fname.value,
-    //         lname: lname.value,
-    //         number : number.value,
-    //         address : address.value
-    //     }
-    // })
-    // console.log(this.state.profile)
+    
     fetch("https://wechatpro.herokuapp.com/api/accounts/profile", {
       method: "PUT",
       headers: {
@@ -76,17 +51,17 @@ class Profile extends React.Component {
         Authorization: `Bearer ${userToken}`,
       },
       body: JSON.stringify({
-        first_name: fname.value,
-        last_name: lname.value,
-        phone_number: number.value,
-        house_add: address.value,
+        first_name: this.state.fname,
+        last_name: this.state.lname,
+        phone_number: this.state.number,
+        house_add: this.state.address,
       }),
     })
       .then((resp) => {
         return resp.json()
       } )
       .then((d) => {
-       // console.log(d);
+        console.log(d);
         //this.getNewAccessToken();
         this.props.history.push("/pages/Account");
       });
@@ -117,20 +92,19 @@ class Profile extends React.Component {
           <h1> You are here 😊!</h1>
           <div className="changeprofile">
             <h3>Let us get to know you</h3>
-            <button onClick={this.edit}>edit</button>
           </div>
           <form onSubmit={this.submit} className="user-profile">
             <input className="email" placeholder="johndoe@mail.com" />
             <br />
-            <input className="username" placeholder="Username" />
+            <input className="username" placeholder="Username" name = ''/>
             <br />
-            <input className="firstname" placeholder="First Name" />
+            <input className="firstname" placeholder="First Name" name = 'fname' onChange = {this.handleUserValue}/>
             <br />
-            <input className="lastname" placeholder="Last Name " />
+            <input className="lastname" placeholder="Last Name " name = 'lname' onChange = {this.handleUserValue} />
             <br />
-            <input className="phonenumber" placeholder="+2341234567890" />
+            <input className="phonenumber" placeholder="+2341234567890" name = 'number' onChange = {this.handleUserValue} />
             <br />
-            <input className="home-address" placeholder="House Address" />
+            <input className="home-address" placeholder="House Address" name = 'address' onChange = {this.handleUserValue}/>
             <br />
             <button className="profile-submit-btn">Submit</button>
           </form>
