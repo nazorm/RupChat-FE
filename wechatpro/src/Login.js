@@ -8,24 +8,20 @@ class  Login extends React.Component {
   constructor(){
     super()
     this.state = {
-      log: {
         email: "",
         password: "",
-      },
     }
     this.login = this.login.bind(this)
+    this.handleChange = this.handleChange.bind(this)
+  }
+  handleChange(e){
+    const {name, value} = e.target
+    this.setState({
+      [name] : value,
+    })
   }
   login(e) {
 	  e.preventDefault()
-    let email = document.querySelector(".email");
-    let password = document.querySelector(".password");
-    this.setState({
-      log:{
-        email: email.value,
-        password: password.value,
-      }
-      
-    });
 
 
     if (!email.value.includes(".com")) {
@@ -42,8 +38,8 @@ class  Login extends React.Component {
             "Bearer 93c5f7049eb1b5bdbaa98b8d5596335f59e078b049f937cf8898f29f9b39294a",
         },
         body: JSON.stringify({
-          email: email.value,
-          password: password.value,
+          email: this.state.email,
+          password: this.state.password,
         }),
       })
         .then((resp)=>{
@@ -70,13 +66,19 @@ class  Login extends React.Component {
                   <input
                       type="text"
                       placeholder="Email"
+                      name='email'
                       className="email"
+                      value={this.state.email}
+                      onChange={this.handleChange}
                   />
                   <br />
                   <input
                       type="password"
+                      name='password'
                       placeholder="Password"
                       className="password"
+                      value = {this.state.password}
+                      onChange={this.handleChange}
                   />
 
                   <button type="submit" className="logToDashboard">Log In</button>
