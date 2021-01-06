@@ -13,34 +13,26 @@ class  Signup extends React.Component {
       username: "",
       password: "",
       confirm_password: "",
+      checked : false,
       registration_id: "wechatPro-test",
     },
     
   };
   this.signup = this.signup.bind(this)
+  this.handleChange = this.handleChange.bind(this)
  }
-
+handleChange(e){
+  const {type, name, value, checked} = e.target
+  type === 'checkbox'? this.setState({[name]: checked}):this.setState({[name]:value})
+}
  signup(e) {
   e.preventDefault()
-  let userName = document.querySelector(".userName");
-  let email = document.querySelector(".email");
-  let password = document.querySelector(".password");
-  let confirmedPassword = document.querySelector(".confirmPassword");
   let terms = document.querySelector(".terms-c");
   let emailFormat = document.querySelector(".emailFormat");
   let  passwordNumber = document.querySelector(".passwordNumber");
   let passwordMatch = document.querySelector(".passwordMatch");
   let checkboxErrorMessage = document.querySelector(".checkboxErrorMessage");
-  this.setState({
-    register: {
-      email: email.value,
-      username: userName.value,
-      password: password.value,
-      confirm_password: confirmedPassword.value,
-      registration_id: "wechatPro-test",
-    }
-    
-  });
+  
 
   if (!email.value.includes(".com")) {
     emailFormat.innerHTML = "wrong email format"
@@ -62,9 +54,9 @@ class  Signup extends React.Component {
 
       body: JSON.stringify({
         email: email.value,
-        username: userName.value,
-        password: password.value,
-        confirm_password: confirmedPassword.value,
+        username: this.state.username,
+        password: this.state.password,
+        confirm_password: this.state.confirm_password,
         registration_id: "wechatPro-test",
       }),
     })
@@ -93,13 +85,18 @@ return (
 
               <h5>Join the Trybe!</h5>
               <form onSubmit = {this.signup} className="sign">
-                  <input type="text" placeholder="Username" className="userName"/>
-                  <input type="text" placeholder="Email" className="email"/>
-                  <input type="password" placeholder="Password" className="password"/>
-                  <input type="password" placeholder="Confirm Password" className="confirmPassword"/>
+                  <input type="text" placeholder="Username" className="userName" name = 'username'onChange={this.handleChange} value={this.state.username}/>
+                  <input type="text" placeholder="Email" className="email" name='email'onChange={this.handleChange} value={this.state.email}/>
+                  <input type="password" placeholder="Password" className="password" name ='password' onChange={this.handleChange} value={this.state.password}/>
+                  <input type="password" placeholder="Confirm Password" className="confirmPassword" name='confirm_password' onChange={this.handleChange} value={this.state.confirm_password}/>
                   <div className="terms-c-container">
-                    <input type="checkbox" className="terms-c" id="terms"/>
+                    
                     <label htmlFor="terms">
+                    <input type="checkbox" className="terms-c" id="terms"
+                    onChange={this.handleChange}
+                    name='checked'
+                    checked = {this.state.checked}
+                    />
                           I accept Wechat's <a href="#">terms of use</a>
                       </label>
                   </div>
